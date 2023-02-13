@@ -7,7 +7,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors())
 const PORT = process.env.PORT || 3000
 const { MongoClient, Db } = require('mongodb')
-const uri = 'mongodb+srv://pngu:AB0dNaJUXo9bdS27@tedavi100.2dpkus9.mongodb.net/?retryWrites=true&w=majority'
+const uri = process.env.URI 
 const client = new MongoClient(uri)
 const mongoose = require('mongoose')
 const User = require('./userschema');
